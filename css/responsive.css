@@ -78,6 +78,10 @@
 
     }
 
+    .btn-whatsapp-header {
+        display: none;
+    }
+
     .nav-container{
 
         height:75px;
