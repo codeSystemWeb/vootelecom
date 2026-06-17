@@ -273,3 +273,16 @@ já deixei espaço preparado aqui.
     }
 
 }
+
+
+@media(max-width:768px){
+
+    .footer-grid{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+}

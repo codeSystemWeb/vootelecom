@@ -684,21 +684,64 @@ button{
    FOOTER
 ===================================== */
 
-footer{
+
+.footer{
 
     background:#090b10;
-
-    padding:60px 0;
-
-    text-align:center;
 
     border-top:1px solid rgba(255,255,255,.05);
 
 }
 
-footer h3{
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    2fr 1fr 1fr 1fr;
+
+    gap:40px;
+
+    padding:80px 0;
+
+}
+
+.footer h3,
+.footer h4{
+
+    margin-bottom:15px;
+
+}
+
+.footer ul{
+
+    list-style:none;
+
+}
+
+.footer li{
 
     margin-bottom:10px;
+
+}
+
+.footer a{
+
+    color:#ccc;
+
+    text-decoration:none;
+
+}
+
+.footer-bottom{
+
+    text-align:center;
+
+    padding:25px;
+
+    border-top:1px solid rgba(255,255,255,.05);
+
+    color:#999;
 
 }
 
@@ -823,5 +866,140 @@ footer h3{
     transform:
         rotate(-45deg)
         translate(7px,-7px);
+
+}
+
+/* FAQ */
+
+.faq-section{
+
+    padding:120px 0;
+
+}
+
+.faq-container{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.faq-item{
+
+    background:#151922;
+
+    border-radius:20px;
+
+    margin-bottom:15px;
+
+    overflow:hidden;
+
+}
+
+.faq-question{
+
+    width:100%;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:25px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+}
+
+.faq-answer{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:.4s;
+
+}
+
+.faq-answer p{
+
+    padding:0 25px 25px;
+
+    color:#bbb;
+
+}
+
+.faq-item.active .faq-answer{
+
+    max-height:200px;
+
+}
+
+/* WHATSAPP */
+
+.whatsapp-float{
+
+    position:fixed;
+
+    bottom:25px;
+    right:25px;
+
+    width:65px;
+    height:65px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:32px;
+
+    text-decoration:none;
+
+    z-index:9999;
+
+    animation:pulse 2s infinite;
+
+    box-shadow:
+    0 0 30px rgba(37,211,102,.5);
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.1);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
 
 }
