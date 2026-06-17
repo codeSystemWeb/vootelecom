@@ -96,6 +96,34 @@ counters.forEach(counter=>{
 
 });
 
+
+/* MENU MOBILE */
+
+const hamburger = document.querySelector(".hamburger");
+
+const menu = document.querySelector(".menu");
+
+hamburger.addEventListener("click", () => {
+
+    menu.classList.toggle("active");
+
+    hamburger.classList.toggle("open");
+
+});
+
+document.querySelectorAll('.menu a')
+.forEach(link=>{
+
+    link.addEventListener('click',()=>{
+
+        menu.classList.remove('active');
+
+        hamburger.classList.remove('open');
+
+    });
+
+});
+
 // BOTÃO WHATSAPP FUTURO
 
 console.log("VOO Telecom carregado");

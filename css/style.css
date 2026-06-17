@@ -730,3 +730,98 @@ footer h3{
     box-shadow:0 10px 40px rgba(0,0,0,.3);
 
 }
+
+/* =====================================
+   MENU HAMBURGER
+===================================== */
+
+.hamburger{
+
+    display:none;
+
+    flex-direction:column;
+
+    gap:6px;
+
+    cursor:pointer;
+
+}
+
+.hamburger span{
+
+    width:28px;
+    height:3px;
+
+    background:white;
+
+    border-radius:10px;
+
+    transition:.3s;
+
+}
+
+/* MENU MOBILE */
+
+@media(max-width:768px){
+
+    .hamburger{
+
+        display:flex;
+
+    }
+
+    .menu{
+
+        position:fixed;
+
+        top:75px;
+        right:-100%;
+
+        width:280px;
+        height:100vh;
+
+        background:#151922;
+
+        flex-direction:column;
+
+        padding:40px;
+
+        gap:25px;
+
+        transition:.4s ease;
+
+        z-index:999;
+
+    }
+
+    .menu.active{
+
+        right:0;
+
+    }
+
+}
+
+/* ANIMAÇÃO X */
+
+.hamburger.open span:nth-child(1){
+
+    transform:
+        rotate(45deg)
+        translate(6px,6px);
+
+}
+
+.hamburger.open span:nth-child(2){
+
+    opacity:0;
+
+}
+
+.hamburger.open span:nth-child(3){
+
+    transform:
+        rotate(-45deg)
+        translate(7px,-7px);
+
+}
