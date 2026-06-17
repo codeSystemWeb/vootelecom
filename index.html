@@ -383,32 +383,62 @@
 
     <!-- COBERTURA -->
 
-    <section class="cobertura" id="cobertura">
-
+   <section class="section" id="cidades">
         <div class="container">
-
-            <div class="section-header">
-
-                <span>COBERTURA</span>
-
-                <h2>Cidades Atendidas</h2>
-
+          <div class="section-head reveal">
+            <div>
+              <h2>Cidades da Voo Telecom</h2>
+              <p>
+                Pesquise por nome da cidade ou estado e encontre rapidamente
+                onde a Voo já está presente.
+              </p>
             </div>
+          </div>
 
-            <div class="cidade-grid">
+          <div class="city-wrapper">
+            <aside class="city-panel search-box reveal">
+              <h3>Buscar cidade</h3>
+              <p>
+                Digite uma cidade, estado ou localidade para filtrar a lista em
+                tempo real.
+              </p>
 
-                <span>Monte Azul</span>
-                <span>Janaúba</span>
-                <span>Espinosa</span>
-                <span>Porteirinha</span>
-                <span>Jaíba</span>
-                <span>Mato Verde</span>
+              <div class="search-field">
+                <span class="search-icon">⌕</span>
+                <input
+                  type="text"
+                  id="citySearch"
+                  placeholder="Ex.: Brumado, SC, Rio Pardo..."
+                />
+              </div>
 
+              <div class="filter-pills" id="stateFilters">
+                <button class="pill active" data-state="ALL" type="button">
+                  Todos
+                </button>
+                <button class="pill" data-state="RS" type="button">RS</button>
+                <button class="pill" data-state="SC" type="button">SC</button>
+                <button class="pill" data-state="BA" type="button">BA</button>
+                <button class="pill" data-state="GO" type="button">GO</button>
+                <button class="pill" data-state="TO" type="button">TO</button>
+                <button class="pill" data-state="MG" type="button">MG</button>
+              </div>
+
+              <div class="search-meta">
+                <span id="cityCount">0 cidades</span>
+                <span id="activeFilter">Filtro: Todos</span>
+              </div>
+            </aside>
+
+            <div class="city-results">
+              <div class="cities-grid" id="citiesGrid"></div>
+              <div class="empty-state" id="emptyState">
+                Nenhuma cidade encontrada com esse filtro.
+              </div>
             </div>
-
+          </div>
         </div>
-
-    </section>
+      </section>
 
     <section class="faq-section">
 
